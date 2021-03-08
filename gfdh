@@ -1,0 +1,16 @@
+import discord
+import os
+
+client = discord.Client()
+
+TOKEN=ODE4NDg4MDUzMDcyNzg5NTA1.YEYyZg.QrfPKrKkg_U3fwYeBVNU7pWFZDQ
+
+# Startup Information
+@client.event
+async def on_ready():
+    await client.change_presence(activity=discord.Game('with my boobs'))
+    
+    print('Connected to bot: {}'.format(client.user.name))
+    print('Bot ID: {}'.format(client.user.id))
+
+client.run(os.getenv('TOKEN'))
